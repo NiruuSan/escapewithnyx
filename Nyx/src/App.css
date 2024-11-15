@@ -1,0 +1,89 @@
+/* src/App.css */
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: "Silkscreen", sans-serif;
+}
+
+.header-container {
+  position: relative;
+  width: 100%;
+  margin: 59px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header-glow {
+  background-size: cover;
+  background-position: center;
+  filter: blur(25px);
+  width: 102%;
+  height: 102%;
+  position: absolute;
+  top: -1%;
+  left: -1%;
+  z-index: 0;
+  opacity: 0.5;
+  border-radius: 20px;
+}
+
+.header-image {
+  width: 100%;
+  border: solid 10px #1e1e1e80;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.dialogue-container, .voting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dialogue-box {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  width: 80%;
+  text-align: center;
+}
+
+.voting-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.vote-button {
+  background-color: #151515;
+  color: #e0e0e0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: solid 5px #1e1e1e;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 250px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.vote-button:hover {
+  background-color: #3a3a3a;
+  transform: scale(1.05);
+}
+
+.vote-count {
+  font-size: 0.85rem;
+  color: #bbbbbb;
+  margin-top: 5px;
+}
