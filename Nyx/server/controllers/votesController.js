@@ -1,4 +1,6 @@
-exports.getVotes = async (req, res) => {
+import db from '../config/db.js';
+
+export const getVotes = async (req, res) => {
     try {
         const [rows] = await db.query('SELECT * FROM votes ORDER BY timestamp');
         res.json(rows);
@@ -8,7 +10,7 @@ exports.getVotes = async (req, res) => {
     }
 };
 
-exports.createVote = async (req, res) => {
+export const createVote = async (req, res) => {
     const { wallet_address, option_id } = req.body;
     try {
         const [result] = await db.query(

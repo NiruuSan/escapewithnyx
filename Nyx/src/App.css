@@ -4,25 +4,36 @@ body {
   background-color: #121212;
   color: #e0e0e0;
   font-family: "Silkscreen", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
 }
 
 .header-container {
   position: relative;
-  width: 100%;
-  margin: 59px 0;
+  width: 90%; /* Ajustement pour les petits écrans */
+  max-width: 1200px; /* Limite pour les grands écrans */
+  margin: 50px auto;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .header-glow {
   background-size: cover;
   background-position: center;
   filter: blur(25px);
-  width: 102%;
-  height: 102%;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: -1%;
-  left: -1%;
+  top: 0;
+  left: 0;
   z-index: 0;
   opacity: 0.5;
   border-radius: 20px;
@@ -30,9 +41,9 @@ body {
 
 .header-image {
   width: 100%;
+  max-width: 600px; /* Taille maximale pour les grands écrans */
   border: solid 10px #1e1e1e80;
   border-radius: 20px;
-  position: relative;
   z-index: 1;
 }
 
@@ -40,6 +51,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%; /* Pour les écrans étroits */
+  max-width: 800px;
   margin-bottom: 20px;
 }
 
@@ -48,15 +61,16 @@ body {
   padding: 20px;
   border-radius: 10px;
   margin: 10px 0;
-  width: 80%;
+  width: 100%; /* Responsive */
+  max-width: 700px; /* Taille maximale */
   text-align: center;
 }
 
 .voting-panel {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centre les boutons */
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permet le passage sur plusieurs lignes */
 }
 
 .vote-button {
@@ -68,7 +82,8 @@ body {
   cursor: pointer;
   font-weight: 400;
   font-size: 1rem;
-  width: 250px;
+  width: 220px; /* Taille par défaut */
+  max-width: 100%; /* Empêche les débordements */
   text-align: center;
   position: relative;
   display: flex;
@@ -86,4 +101,35 @@ body {
   font-size: 0.85rem;
   color: #bbbbbb;
   margin-top: 5px;
+}
+
+/* Media Queries pour écrans plus petits */
+@media (max-width: 768px) {
+  .header-container {
+    margin: 30px auto;
+  }
+
+  .header-image {
+    max-width: 90%; /* Réduit la taille pour les écrans étroits */
+  }
+
+  .vote-button {
+    width: 100%; /* Les boutons prennent toute la largeur */
+    max-width: 300px; /* Limite la largeur */
+  }
+
+  .voting-panel {
+    gap: 10px; /* Réduit l'espacement entre les boutons */
+  }
+}
+
+@media (max-width: 480px) {
+  .dialogue-box {
+    font-size: 0.9rem; /* Réduit la taille de texte pour petits écrans */
+  }
+
+  .vote-button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
 }

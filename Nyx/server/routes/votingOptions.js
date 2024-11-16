@@ -1,8 +1,9 @@
-const express = require('express');
+import express from 'express';
+import { getVotingOptions, createVotingOption } from '../controllers/votingOptionsController.js';
+
 const router = express.Router();
-const votingOptionsController = require('../controllers/votingOptionsController');
 
-router.get('/', votingOptionsController.getVotingOptions);
-router.post('/', votingOptionsController.createVotingOption);
+router.get('/', getVotingOptions);
+router.post('/', createVotingOption);
 
-module.exports = router;
+export default router;

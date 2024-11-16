@@ -1,10 +1,9 @@
-// server/routes/messages.js
-const express = require('express');
+import express from 'express';
+import { getMessages, createMessage } from '../controllers/messagesController.js';
+
 const router = express.Router();
 
-// Ajoutez ici les routes pour les messages
-router.get('/', (req, res) => {
-  res.send('Bienvenue sur l’API des messages!');
-});
+router.get('/', getMessages);
+router.post('/', createMessage);
 
-export default router;  // Utilisez une exportation par défaut
+export default router;

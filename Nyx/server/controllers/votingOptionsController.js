@@ -1,4 +1,6 @@
-exports.getVotingOptions = async (req, res) => {
+import db from '../config/db.js';
+
+export const getVotingOptions = async (req, res) => {
     try {
         const [rows] = await db.query('SELECT * FROM votingoptions');
         res.json(rows);
@@ -8,7 +10,7 @@ exports.getVotingOptions = async (req, res) => {
     }
 };
 
-exports.createVotingOption = async (req, res) => {
+export const createVotingOption = async (req, res) => {
     const { message_id, option_text } = req.body;
     try {
         const [result] = await db.query(

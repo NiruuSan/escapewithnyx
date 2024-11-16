@@ -1,6 +1,6 @@
-const db = require('../config/db');
+import db from '../config/db.js';
 
-exports.getMessages = async (req, res) => {
+export const getMessages = async (req, res) => {
     try {
         const [rows] = await db.query('SELECT * FROM messages ORDER BY timestamp');
         res.json(rows);
@@ -10,7 +10,7 @@ exports.getMessages = async (req, res) => {
     }
 };
 
-exports.createMessage = async (req, res) => {
+export const createMessage = async (req, res) => {
     const { sender, content, response_to } = req.body;
     try {
         const [result] = await db.query(
