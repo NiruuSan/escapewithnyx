@@ -1,0 +1,32 @@
+/* global.css */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap'); /* Ensure this matches your desired font */
+
+body {
+    background-color: #181818;
+    color: #e0e0e0;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    padding: 0 294px;
+    box-sizing: border-box;
+}
+  
+#root {
+    width: 100%;
+    max-width: 852px; /* This will make sure it's centered with the margins */
+}
+
+#Header {
+    width: 100%;
+    margin: 59px 0;
+    border-radius: 20px;
+    border: solid 10px #1e1e1e80;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
