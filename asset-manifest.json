@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/escapewithnyx/static/css/main.8d62a5cc.css",
+    "main.js": "/escapewithnyx/static/js/main.fe29d8e1.js",
+    "static/media/nyxAvatar.png": "/escapewithnyx/static/media/nyxAvatar.1e8063e96b823de9ca3b.png",
+    "static/media/headerImage.png": "/escapewithnyx/static/media/headerImage.6df40ce98f7453679708.png",
+    "index.html": "/escapewithnyx/index.html",
+    "main.8d62a5cc.css.map": "/escapewithnyx/static/css/main.8d62a5cc.css.map",
+    "main.fe29d8e1.js.map": "/escapewithnyx/static/js/main.fe29d8e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d62a5cc.css",
+    "static/js/main.fe29d8e1.js"
+  ]
+}
